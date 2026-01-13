@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDb } from 'lib/database'; // Changed to absolute import
+import { getDb } from '@/lib/database'; // Fixed: Use @/ alias for absolute import
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -19,7 +19,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       // Generate a simple ID (lowdb doesn't auto-increment like SQL dbs)
       const examples = db.data?.examples || [];
-      const newId = examples.length > 0 ? Math.max(...examples.map(e => e.id)) + 1 : 1;
+      // Fixed: Added type annotation for 'e' to resolve implicit any error
+      const newId = examples.length > 0 ? Math.max(...examples.map((e: { id: number }) => e.id)) + 1 : 1;
 
       const newExample = {
         id: newId,
