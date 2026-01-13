@@ -16,7 +16,7 @@ export default function Home() {
       <main className="flex-grow flex flex-col items-center justify-center relative z-10 px-4 text-center">
         <div className="max-w-3xl space-y-8">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-pulse">
-            Builder X AI
+            BuilderX AI
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">

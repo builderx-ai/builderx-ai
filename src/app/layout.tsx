@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Builder X AI",
+  title: "BuilderX AI",
   description: "Experience the fluid interface of tomorrow.",
 };
 
