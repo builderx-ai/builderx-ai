@@ -149,6 +149,7 @@ export default function NextEventPage() {
         </div>
       </main>
 
+      <MadeWithDyad />
     </div>
   );
 }

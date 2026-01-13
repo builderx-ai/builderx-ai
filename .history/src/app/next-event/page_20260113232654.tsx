@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
+import { MadeWithDyad } from '@/components/made-with-dyad';
 import { Calendar, MapPin, Clock, Share2, ArrowRight } from 'lucide-react';
 
 export default function NextEventPage() {
@@ -149,6 +150,7 @@ export default function NextEventPage() {
         </div>
       </main>
 
+      <MadeWithDyad />
     </div>
   );
 }

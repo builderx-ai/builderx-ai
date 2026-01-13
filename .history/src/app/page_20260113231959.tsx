@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
+import { MadeWithDyad } from '@/components/made-with-dyad';
 import FlowingLinesBackground from '@/components/FlowingLinesBackground';
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
         </div>
       </main>
 
+      <MadeWithDyad />
     </div>
   );
 }
