@@ -24,7 +24,7 @@ export default function Home() {
           </p>
 
           <div className="pt-4">
-            <Link href="/read-more">
+            <Link href="/next-event">
               <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] border-none">
                 Next Event
               </Button>
