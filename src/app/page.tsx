@@ -20,7 +20,7 @@ export default function Home() {
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Experience the fluid interface of tomorrow. A seamless blend of design and functionality waiting to be explored.
+            Australia Top AI community that connects builders and founders.
           </p>
 
           <div className="pt-4">
