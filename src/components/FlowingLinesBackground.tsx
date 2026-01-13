@@ -58,7 +58,7 @@ const FlowingLinesBackground = () => {
       }
 
       drawNode() {
-        // Using Cyan instead of Red to match the Digital Horizons theme
+        // Using Cyan to match the Digital Horizons theme
         const color = "rgba(0, 255, 255, " + this.brightness + ")";
         if (!ctx) return;
         ctx.beginPath();
@@ -220,7 +220,7 @@ const FlowingLinesBackground = () => {
   return (
     <canvas 
       ref={canvasRef} 
-      className="absolute top-0 left-0 w-full h-full -z-10 bg-[#25003a]"
+      className="absolute top-0 left-0 w-full h-full z-0"
     />
   );
 };

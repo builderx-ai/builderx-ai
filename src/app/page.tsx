@@ -7,7 +7,7 @@ import FlowingLinesBackground from '@/components/FlowingLinesBackground';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden flex flex-col">
+    <div className="min-h-screen relative overflow-hidden flex flex-col">
       <Navbar />
 
       {/* New Canvas Background */}
