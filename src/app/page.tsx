@@ -3,30 +3,29 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import { MadeWithDyad } from '@/components/made-with-dyad';
+import FlowingLinesBackground from '@/components/FlowingLinesBackground';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden flex flex-col">
       <Navbar />
 
-      {/* Background Gradients/Blobs */}
-      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-[40%] left-[60%] w-[300px] h-[300px] bg-pink-600/20 rounded-full blur-[100px] pointer-events-none" />
+      {/* New Canvas Background */}
+      <FlowingLinesBackground />
 
       <main className="flex-grow flex flex-col items-center justify-center relative z-10 px-4 text-center">
         <div className="max-w-3xl space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/50">
-            Future Technology
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-pulse">
+            Digital Horizons
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Experience the fluid interface of tomorrow. A seamless blend of design and functionality waiting to be explored.
           </p>
 
           <div className="pt-4">
             <Link href="/read-more">
-              <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-white text-black hover:bg-white/90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+              <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] border-none">
                 Read More
               </Button>
             </Link>
