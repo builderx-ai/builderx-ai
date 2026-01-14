@@ -33,7 +33,7 @@ export default function NextEventPage() {
           {/* Hero Title */}
           <div className="space-y-2">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white leading-tight">
-              BuilderX AI 线下共创活动
+              BuilderX AI 线下共创
             </h1>
             <h2 className="text-4xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
               2026年1月 · 悉尼
