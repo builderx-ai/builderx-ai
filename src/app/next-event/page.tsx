@@ -60,7 +60,7 @@ export default function NextEventPage() {
               ，参与一场小规模、邀请制、强调产出的线下共创活动。
             </p>
             <p>
-              本期计划招募约 20 位精选参与者。为保证交流密度与每位参与者的收获，活动采用邀请 + 审核报名机制。
+              本期计划招募约 10 位精选开发者和1-3Idea提供者。为保证交流密度与每位参与者的收获，活动采用邀请 + 审核报名机制。
             </p>
             <p>
               你可以带着正在做的产品 / 想法原型 / 真实需求来——我们更看重“动手构建”和“共同推进”。
@@ -78,15 +78,15 @@ export default function NextEventPage() {
           {/* Agenda Section */}
           <div className="mt-12 space-y-6">
             <div className="flex items-center gap-3 mb-6">
-              <h3 className="text-3xl font-bold text-white">活动形式（拟）</h3>
+              <h3 className="text-3xl font-bold text-white">Agenda</h3>
               <div className="h-1 flex-grow bg-gradient-to-r from-purple-500/50 to-transparent rounded-full" />
             </div>
 
             <div className="space-y-3">
               {[
                 "BuilderX AI 致辞与愿景",
-                "特邀嘉宾分享（确认中）",
-                "参与者产品/想法路演（每人 3-5 分钟）",
+                "参与者产品/想法路演（每个项目 5 分钟）",
+                "Idea开发者和提供者的交叉互询 （每个项目15分钟）",
                 "组队与选题：目标定义 + 构建计划",
               ].map((item, index) => (
                 <div key={index} className="group relative overflow-hidden rounded-lg bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
@@ -117,44 +117,18 @@ export default function NextEventPage() {
 
           {/* Event Details */}
           <div className="flex items-center gap-3 mb-6">
-              <h3 className="text-3xl font-bold text-white">时间与地点（拟）</h3>
+              <h3 className="text-3xl font-bold text-white">时间与地点</h3>
               <div className="h-1 flex-grow bg-gradient-to-r from-purple-500/50 to-transparent rounded-full" />
             </div>
           <div className="mt-12 space-y-4 text-sm md:text-base">
             <div className="flex items-center gap-4 text-gray-200">
               <Calendar className="w-5 h-5 text-purple-400" />
-              <span className="font-mono">2026年1月（具体日期确认中，报名后通知）</span>
+              <span className="font-mono">2026年1月25日，周日晚6点-8点</span>
             </div>
             <div className="flex items-start gap-4 text-gray-200">
               <MapPin className="w-5 h-5 text-purple-400 mt-1" />
-              <span>悉尼（CBD 附近，场地确认中）</span>
+              <span>L9, 370 Pitt St, Sydney</span>
             </div>
-          </div>
-
-          {/* QR Code / Registration Area */}
-          <div className="mt-12 flex flex-col items-center justify-center space-y-4">
-            <p className="text-sm font-semibold text-white">扫码报名 / 咨询（备注：BuilderX AI 共创）</p>
-            <div className="p-1 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500">
-              <div className="bg-white p-2 rounded-lg">
-                <Image
-                  src="/qr-code.png"
-                  alt="BuilderX AI 群二维码"
-                  width={128}
-                  height={128}
-                  className="h-32 w-32 rounded-sm object-contain"
-                />
-              </div>
-            </div>
-            <p className="text-xs text-gray-500 text-center max-w-xs">
-              建议你直接发送：你的方向 / 正在做的产品（或想法）/ 你最想解决的问题，我们会尽快回复。
-            </p>
-            
-            <Button
-              asChild
-              className="w-full md:w-auto bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-medium shadow-[0_0_20px_rgba(147,51,234,0.3)]"
-            >
-              <Link href="https://builderxai.notion.site/">我想知道更多</Link>
-            </Button>
           </div>
 
           {/* Footer Info Box */}
@@ -167,7 +141,7 @@ export default function NextEventPage() {
           {/* Partner Logos Area */}
           <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 opacity-70">
             <div className="text-sm font-semibold tracking-wider uppercase">
-              合作伙伴：持续更新
+              活动特别感谢：Augrants
             </div>
             <div className="h-4 w-px bg-white/30 hidden md:block" />
             <div className="flex items-center gap-2">
