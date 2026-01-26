@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BuilderX AI",
   description: "Experience the fluid interface of tomorrow.",
+  icons: { icon: '/favicon.png' }
 };
 
 export default function RootLayout({

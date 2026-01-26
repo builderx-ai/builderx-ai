@@ -23,7 +23,7 @@ export default function Home() {
       type: 'past',
     },
     {
-      date: '待定',
+      date: '2026年2月20日',
       title: '下一次线上分享会',
       description: '特邀嘉宾分享AI前沿技术与创业经验。',
       link: '/next-event',
@@ -47,13 +47,12 @@ export default function Home() {
       <main className="flex-grow flex flex-col items-center justify-center relative z-10 px-4 text-center">
         <div className="max-w-3xl w-full space-y-8 py-12">
           <Image 
-            src="/builderx-ai-logo.png" 
+            src="/favicon.png" 
             alt="BuilderX AI Logo" 
             width={600} 
             height={600} 
             className="mx-auto mb-8"
           />
-          
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Australia Top AI community that connects builders and founders.
           </p>
