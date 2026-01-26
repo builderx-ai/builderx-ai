@@ -23,7 +23,7 @@ export default function Home() {
       type: 'past',
     },
     {
-      date: '2026年2月20日',
+      date: '待定',
       title: '下一次线上分享会',
       description: '特邀嘉宾分享AI前沿技术与创业经验。',
       link: '/next-event',
