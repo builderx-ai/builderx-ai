@@ -31,7 +31,7 @@ export default function Home() {
     {
       date: '待定',
       title: '第二期线下活动筹划中',
-      description: '即将带来更精彩的共创主题和实战项目，敬请期待！',
+      description: '即将带来第一期项目回顾，以及更精彩的共创主题和实战项目，敬请期待！',
       type: 'planned',
     },
   ];
