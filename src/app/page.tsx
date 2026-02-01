@@ -18,15 +18,16 @@ export default function Home() {
     {
       date: '2026年1月25日',
       title: 'BuilderX AI 首次线下活动',
-      description: '第一期线下共创活动圆满落幕，拒绝自嗨，我们要的是“定性开头”。',
+      description: '第一期线下共创活动圆满落幕，拒绝自嗨，我们要的是"定性开头"。',
       link: '/events/first-event-recap',
       type: 'past',
     },
     {
-      date: '待定',
-      title: '下一次线上分享会',
-      description: '特邀嘉宾分享AI前沿技术与创业经验。',
-      type: 'upcoming',
+      date: '2月5日 周四 7:30PM',
+      title: '一个人 + AI = 一个团队',
+      description: 'AI Coding 全栈开发实战分享：3万行代码、22个页面，从需求分析到部署上线的全流程分享。',
+      link: '/next-event',
+      type: 'current',
     },
     {
       date: '待定',
