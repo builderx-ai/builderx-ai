@@ -106,7 +106,7 @@ export default function NextEventPage() {
           <div className="space-y-4 text-sm md:text-base">
             <div className="flex items-center gap-4 text-gray-200">
               <Calendar className="w-5 h-5 text-purple-400" />
-              <span className="font-mono">2026年2月15日 周日 6:30 PM - 8:30 PM</span>
+              <span className="font-mono">2026年2月15日 周日 6:00 PM - 8:00 PM</span>
             </div>
             <div className="flex items-start gap-4 text-gray-200">
               <MapPin className="w-5 h-5 text-purple-400 mt-1" />
