@@ -23,16 +23,23 @@ export default function Home() {
       type: 'past',
     },
     {
-      date: '2月5日 周四 7:30PM',
+      date: '2026年2月5日',
       title: '一个人 + AI = 一个团队',
       description: 'AI Coding 全栈开发实战分享：3万行代码、22个页面，从需求分析到部署上线的全流程分享。',
+      link: '/events/ai-coding-talk',
+      type: 'past',
+    },
+    {
+      date: '2月15日 周六',
+      title: '下一期线上分享会',
+      description: '更多精彩内容即将揭晓，敬请期待！',
       link: '/next-event',
       type: 'current',
     },
     {
       date: '待定',
       title: '第二期线下活动筹划中',
-      description: '即将带来第一期项目回顾，以及更精彩的共创主题和实战项目，敬请期待！',
+      description: '即将带来项目回顾，以及更精彩的共创主题和实战项目，敬请期待！',
       type: 'planned',
     },
   ];
