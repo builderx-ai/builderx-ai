@@ -114,7 +114,8 @@ export default function NextEventPage() {
                 <div className="font-semibold text-white">The Ranch Hotel</div>
                 <div>Cnr Epping & Herring Roads</div>
                 <div>Eastwood NSW 2122, Australia</div>
-                <div className="text-purple-400 text-sm mt-1">Reservation: Vincent Lin</div>
+                <div className="text-green-400 text-sm mt-1">🅿️ 免费停车</div>
+                <div className="text-purple-400 text-sm">Reservation: Vincent Lin</div>
               </div>
             </div>
           </div>
