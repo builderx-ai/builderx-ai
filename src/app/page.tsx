@@ -30,8 +30,8 @@ export default function Home() {
       type: 'past',
     },
     {
-      date: '2月15日 周六',
-      title: '下一期线上分享会',
+      date: '2月15日 周日',
+      title: '下一期线下分享会',
       description: '更多精彩内容即将揭晓，敬请期待！',
       link: '/next-event',
       type: 'current',

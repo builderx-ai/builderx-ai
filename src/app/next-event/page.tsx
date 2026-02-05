@@ -39,10 +39,10 @@ export default function NextEventPage() {
           {/* Hero Title */}
           <div className="space-y-2">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white leading-tight">
-              BuilderX AI 线上分享
+              BuilderX AI 线下分享
             </h1>
             <h2 className="text-4xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-              2026年2月 · 第二期
+              2026年2月 · 悉尼
             </h2>
           </div>
 
@@ -118,11 +118,11 @@ export default function NextEventPage() {
           <div className="space-y-4 text-sm md:text-base">
             <div className="flex items-center gap-4 text-gray-200">
               <Calendar className="w-5 h-5 text-purple-400" />
-              <span className="font-mono">2026年2月15日 周六（具体时间待定）</span>
+              <span className="font-mono">2026年2月15日 周日（具体时间待定）</span>
             </div>
             <div className="flex items-start gap-4 text-gray-200">
-              <Users className="w-5 h-5 text-purple-400 mt-1" />
-              <span>线上分享会（Microsoft Teams）</span>
+              <MapPin className="w-5 h-5 text-purple-400 mt-1" />
+              <span>悉尼（具体地点待定）</span>
             </div>
           </div>
 
@@ -226,7 +226,7 @@ export default function NextEventPage() {
           {/* Partner Logos Area */}
           <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 opacity-70">
             <div className="text-sm font-semibold tracking-wider uppercase">
-              BuilderX AI 线上分享系列 #2
+              BuilderX AI 线下分享系列
             </div>
             <div className="h-4 w-px bg-white/30 hidden md:block" />
             <div className="flex items-center gap-2">
