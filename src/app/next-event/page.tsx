@@ -106,11 +106,16 @@ export default function NextEventPage() {
           <div className="space-y-4 text-sm md:text-base">
             <div className="flex items-center gap-4 text-gray-200">
               <Calendar className="w-5 h-5 text-purple-400" />
-              <span className="font-mono">2026年2月15日 周日（具体时间待定）</span>
+              <span className="font-mono">2026年2月15日 周日 6:30 PM - 8:30 PM</span>
             </div>
             <div className="flex items-start gap-4 text-gray-200">
               <MapPin className="w-5 h-5 text-purple-400 mt-1" />
-              <span>悉尼（具体地点待定）</span>
+              <div>
+                <div className="font-semibold text-white">The Ranch Hotel</div>
+                <div>Cnr Epping & Herring Roads</div>
+                <div>Eastwood NSW 2122, Australia</div>
+                <div className="text-purple-400 text-sm mt-1">Reservation: Vincent Lin</div>
+              </div>
             </div>
           </div>
 
