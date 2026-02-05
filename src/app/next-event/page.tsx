@@ -1,12 +1,6 @@
-'use client';
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import { Calendar, MapPin, ArrowRight, QrCode } from 'lucide-react';
-import { QRCodeSVG } from 'qrcode.react';
-
-// TODO: 更新为新的报名链接
-const REGISTRATION_URL = '';
+import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 
 export default function NextEventPage() {
   return (
@@ -119,58 +113,6 @@ export default function NextEventPage() {
               </div>
             </div>
           </div>
-
-          {/* Registration Section - Hidden until URL is set */}
-          {REGISTRATION_URL && (
-            <div className="mt-12">
-              <div className="flex items-center gap-3 mb-6">
-                <h3 className="text-3xl font-bold text-white">立即报名</h3>
-                <div className="h-1 flex-grow bg-gradient-to-r from-green-500/50 to-transparent rounded-full" />
-              </div>
-              <div className="flex flex-col md:flex-row items-center gap-8 p-6 bg-gradient-to-r from-green-900/20 to-cyan-900/20 border border-green-500/30 rounded-xl backdrop-blur-sm">
-                <div className="bg-white p-4 rounded-xl shadow-lg shadow-green-500/20">
-                  <QRCodeSVG
-                    value={REGISTRATION_URL}
-                    size={160}
-                    level="H"
-                    includeMargin={false}
-                    bgColor="#ffffff"
-                    fgColor="#0a0514"
-                  />
-                </div>
-                <div className="flex-grow text-center md:text-left space-y-4">
-                  <p className="text-lg text-white font-medium">
-                    扫码报名参加活动
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    使用手机扫描二维码，或点击下方按钮直接报名
-                  </p>
-                  <a
-                    href={REGISTRATION_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-cyan-600 hover:from-green-500 hover:to-cyan-500 text-white font-semibold rounded-lg transition-all shadow-lg shadow-green-500/25"
-                  >
-                    <QrCode className="w-5 h-5" />
-                    点击报名
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Coming Soon Notice */}
-          {!REGISTRATION_URL && (
-            <div className="mt-12 p-6 border border-yellow-500/30 bg-yellow-900/20 rounded-xl backdrop-blur-sm text-center">
-              <p className="text-lg text-white font-medium mb-2">
-                📢 报名链接即将开放
-              </p>
-              <p className="text-sm text-gray-400">
-                具体分享主题和嘉宾信息将很快公布，敬请关注社群动态！
-              </p>
-            </div>
-          )}
 
           {/* Footer Info Box */}
           <div className="mt-16 p-6 border border-purple-500/30 bg-purple-900/20 rounded-xl backdrop-blur-sm">
