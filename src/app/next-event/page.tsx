@@ -1,11 +1,8 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import { Button } from '@/components/ui/button';
-import { Calendar, MapPin, Clock, Share2, ArrowRight, Users, QrCode } from 'lucide-react';
+import { Calendar, MapPin, ArrowRight, QrCode } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
 // TODO: 更新为新的报名链接
@@ -63,14 +60,7 @@ export default function NextEventPage() {
               <span className="text-purple-400 font-semibold">
                 AI / Agent 领域真实在做产品的构建者、产品经理、创始人、工程师与增长伙伴
               </span>
-              ，参与第二期线上分享活动。
-            </p>
-            <p>
-              继首期线下共创和{" "}
-              <Link href="/events/ai-coding-talk" className="text-cyan-400 hover:underline">
-                「一个人 + AI = 一个团队」
-              </Link>
-              {" "}线上分享的成功举办，我们将继续带来更多实战干货。
+              ，参与一场小规模、邀请制的线下分享活动。
             </p>
             <p>
               无论你是正在做 AI 产品，还是对 AI 赋能开发感兴趣，都欢迎加入我们的分享与交流。
@@ -94,10 +84,8 @@ export default function NextEventPage() {
 
             <div className="space-y-3">
               {[
-                "嘉宾分享：主题待定",
-                "实战案例：技术选型与踩坑经验",
-                "Q&A 互动：现场答疑与交流",
-                "社区资讯：近期活动与项目进展",
+                "eSIM 项目总结：Sprint 0 验证回顾与复盘",
+                "新项目讨论：下一阶段共创项目探索",
               ].map((item, index) => (
                 <div key={index} className="group relative overflow-hidden rounded-lg bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -112,7 +100,7 @@ export default function NextEventPage() {
 
           {/* Event Details */}
           <div className="flex items-center gap-3 mb-6 mt-12">
-            <h3 className="text-3xl font-bold text-white">时间与形式</h3>
+            <h3 className="text-3xl font-bold text-white">时间与地点</h3>
             <div className="h-1 flex-grow bg-gradient-to-r from-purple-500/50 to-transparent rounded-full" />
           </div>
           <div className="space-y-4 text-sm md:text-base">
@@ -178,44 +166,6 @@ export default function NextEventPage() {
             </div>
           )}
 
-          {/* Past Events */}
-          <div className="mt-12 space-y-6">
-            <div className="flex items-center gap-3 mb-6">
-              <h3 className="text-3xl font-bold text-white">往期精彩</h3>
-              <div className="h-1 flex-grow bg-gradient-to-r from-purple-500/50 to-transparent rounded-full" />
-            </div>
-
-            <Link
-              href="/events/ai-coding-talk"
-              className="group block relative overflow-hidden rounded-lg bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative p-4 flex items-center justify-between">
-                <div>
-                  <div className="text-xs text-cyan-400 mb-1">2026年2月5日 · 线上分享</div>
-                  <span className="font-medium text-lg">一个人 + AI = 一个团队</span>
-                  <div className="text-sm text-gray-400 mt-1">AI Coding 全栈开发实战分享</div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            <Link
-              href="/events/first-event-recap"
-              className="group block relative overflow-hidden rounded-lg bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-300"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative p-4 flex items-center justify-between">
-                <div>
-                  <div className="text-xs text-purple-400 mb-1">2026年1月25日 · 线下共创</div>
-                  <span className="font-medium text-lg">BuilderX AI 首次线下活动</span>
-                  <div className="text-sm text-gray-400 mt-1">拒绝自嗨，我们要的是"定性开头"</div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-          </div>
-
           {/* Footer Info Box */}
           <div className="mt-16 p-6 border border-purple-500/30 bg-purple-900/20 rounded-xl backdrop-blur-sm">
             <p className="text-sm text-gray-300 leading-relaxed">
@@ -226,7 +176,7 @@ export default function NextEventPage() {
           {/* Partner Logos Area */}
           <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 opacity-70">
             <div className="text-sm font-semibold tracking-wider uppercase">
-              BuilderX AI 线下分享系列
+              BuilderX AI 线下分享
             </div>
             <div className="h-4 w-px bg-white/30 hidden md:block" />
             <div className="flex items-center gap-2">
