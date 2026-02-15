@@ -30,7 +30,14 @@ export default function Home() {
       type: 'past',
     },
     {
-      date: '2月15日 周日',
+      date: '2026年2月15日',
+      title: '新年小年派对',
+      description: '在轻松的氛围中探讨 AI 现状与创业，享受连接的乐趣。',
+      link: '/events/2026-02-15-xiaonian',
+      type: 'past',
+    },
+    {
+      date: '2月下旬',
       title: '下一期线下分享会',
       description: '更多精彩内容即将揭晓，敬请期待！',
       link: '/next-event',
