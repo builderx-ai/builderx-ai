@@ -24,6 +24,9 @@ export async function POST(request: Request) {
       from: 'BuilderX AI <hello@builderxai.dev>',
       to: email,
       subject: 'Welcome to BuilderX AI Community! 🚀',
+      headers: {
+        'List-Unsubscribe': `<mailto:hello@builderxai.dev?subject=unsubscribe from ${email}>`,
+      },
       html: `
         <div style="font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; padding: 40px; max-width: 600px; margin: auto; border: 1px solid #1a1a1a; border-radius: 12px;">
           <div style="background: linear-gradient(to right, #4f46e5, #9333ea); height: 4px; border-radius: 4px 4px 0 0; margin: -40px -40px 40px -40px;"></div>
@@ -40,7 +43,7 @@ export async function POST(request: Request) {
             You received this because you subscribed on <a href="https://builderxai.dev" style="color: #6366f1; text-decoration: none;">builderxai.dev</a>.
           </p>
           <p style="font-size: 11px; color: #52525b; text-align: center; margin-top: 10px;">
-            <a href="{{unsubscribe_url}}" style="color: #71717a; text-decoration: underline;">Unsubscribe</a>
+            To stop receiving these, please <a href="mailto:hello@builderxai.dev?subject=Unsubscribe" style="color: #71717a; text-decoration: underline;">reply to this email</a> with "Unsubscribe".
           </p>
           <p style="font-size: 12px; color: #52525b; text-align: center; margin-top: 20px;">© 2026 BuilderX AI. Sydney, Australia.</p>
         </div>
