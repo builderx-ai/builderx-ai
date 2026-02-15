@@ -39,8 +39,8 @@ export async function POST(request: Request) {
           <p style="font-size: 12px; color: #71717a; text-align: center;">
             You received this because you subscribed on <a href="https://builderxai.dev" style="color: #6366f1; text-decoration: none;">builderxai.dev</a>.
           </p>
-          <p style="font-size: 12px; color: #71717a; text-align: center; margin-top: 10px;">
-            <a href="{{{resend_unsubscribe}}}" style="color: #ef4444; text-decoration: underline;">Unsubscribe from this list</a>
+          <p style="font-size: 11px; color: #52525b; text-align: center; margin-top: 10px;">
+            <a href="{{unsubscribe_url}}" style="color: #71717a; text-decoration: underline;">Unsubscribe</a>
           </p>
           <p style="font-size: 12px; color: #52525b; text-align: center; margin-top: 20px;">© 2026 BuilderX AI. Sydney, Australia.</p>
         </div>
