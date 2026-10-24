@@ -36,19 +36,6 @@ export default function Home() {
       link: '/events/2026-02-15-xiaonian',
       type: 'past',
     },
-    {
-      date: '2月下旬',
-      title: '下一期线下分享会',
-      description: '更多精彩内容即将揭晓，敬请期待！',
-      link: '/next-event',
-      type: 'current',
-    },
-    {
-      date: '待定',
-      title: '第二期线下活动筹划中',
-      description: '即将带来项目回顾，以及更精彩的共创主题和实战项目，敬请期待！',
-      type: 'planned',
-    },
   ];
 
   return (
