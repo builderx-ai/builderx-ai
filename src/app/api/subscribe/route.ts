@@ -1,11 +1,23 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const AUDIENCE_ID = '3f171c68-9132-4322-9fb8-0f2000d70e51';
+
+// Create the client per request: constructing it at module load breaks `next build`
+// in environments without RESEND_API_KEY (e.g. the Docker CI image build).
+function getResend(): Resend | null {
+  const key = process.env.RESEND_API_KEY;
+  return key ? new Resend(key) : null;
+}
 
 export async function POST(request: Request) {
   try {
+    const resend = getResend();
+    if (!resend) {
+      console.error('Subscription error: RESEND_API_KEY is not set');
+      return NextResponse.json({ error: 'Subscription is temporarily unavailable' }, { status: 503 });
+    }
+
     const { email } = await request.json();
 
     if (!email || !email.includes('@')) {

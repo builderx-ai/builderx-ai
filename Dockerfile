@@ -3,16 +3,17 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package.json and package-lock.json (or yarn.lock) to leverage Docker cache
-COPY package.json yarn.lock* ./
-RUN yarn install --frozen-lockfile
+# The repo uses pnpm (pnpm-lock.yaml v9); install exactly what the lockfile pins, same as Vercel.
+# Pin pnpm 9: pnpm 10+ refuses to install when dependency build scripts (sharp) are not approved.
+RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
 # Copy the rest of the application code
 COPY . .
 
 # Build the Next.js application
-# 'output' directory contains the optimized Next.js build
-RUN yarn build
+RUN pnpm build
 
 # Stage 2: Create the production-ready image
 FROM node:20-alpine
@@ -22,8 +23,7 @@ ENV NODE_ENV=production
 ENV PORT=3000
 
 WORKDIR /app
-
-# Copy only necessary files from the builder stage
+RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
 # The .next directory contains the production build of Next.js
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
@@ -38,5 +38,5 @@ COPY --from=builder /app/public ./public
 EXPOSE 3000
 
 # Command to run the Next.js application in production mode
-CMD ["yarn", "start"]
+CMD ["pnpm", "start"]
 
