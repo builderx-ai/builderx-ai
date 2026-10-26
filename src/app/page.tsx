@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import FlowingLinesBackground from '@/components/FlowingLinesBackground';
 import Timeline from '@/components/Timeline'; // Import the Timeline component
 import Image from 'next/image';
+import SiteFooter from '@/components/SiteFooter';
 
 interface Event {
   date: string;
@@ -45,7 +46,7 @@ export default function Home() {
       {/* New Canvas Background */}
       <FlowingLinesBackground />
 
-      <main className="flex-grow flex flex-col items-center justify-center relative z-10 px-4 text-center">
+      <main id="main-content" className="flex-grow flex flex-col items-center justify-center relative z-10 px-4 text-center">
         <div className="max-w-3xl w-full space-y-8 py-12">
           <Image 
             src="/favicon.png" 
@@ -67,6 +68,7 @@ export default function Home() {
         </div>
       </main>
 
+      <SiteFooter />
     </div>
   );
 }

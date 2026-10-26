@@ -2,6 +2,13 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 
+export const metadata = {
+  title: '线下分享（2026年2月）',
+  description: 'BuilderX AI 2026年2月悉尼线下分享。',
+  robots: { index: false, follow: false },
+};
+
+
 export default function NextEventPage() {
   return (
     <div className="min-h-screen bg-[#0a0514] text-white relative overflow-hidden flex flex-col font-sans">
@@ -15,7 +22,7 @@ export default function NextEventPage() {
       <div className="absolute bottom-[10%] left-[-100px] w-[300px] h-[300px] bg-cyan-600/20 rounded-full blur-[80px] pointer-events-none" />
 
       {/* Added pt-24 to prevent navbar overlap */}
-      <main className="flex-grow flex flex-col items-center relative z-10 px-4 py-8 md:py-12 pt-24 md:pt-32">
+      <main id="main-content" className="flex-grow flex flex-col items-center relative z-10 px-4 py-8 md:py-12 pt-24 md:pt-32">
         <div className="max-w-2xl w-full space-y-8">
           {/* Top Bar */}
           <div className="flex justify-between items-center mb-8">

@@ -4,9 +4,9 @@ import { Button } from './ui/button';
 
 const Navbar = () => {
   return (
-    <nav className="w-full h-16 border-b border-white/10 bg-black/20 backdrop-blur-md fixed top-0 left-0 z-50">
+    <nav aria-label="主导航" className="w-full h-16 border-b border-white/10 bg-black/20 backdrop-blur-md fixed top-0 left-0 z-50">
       <div className="container mx-auto h-full flex items-center justify-between px-4">
-        <Link href="/" className="text-xl font-bold tracking-tighter hover:opacity-80">
+        <Link href="/" className="rounded text-xl font-bold tracking-tighter transition-opacity duration-300 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
           BuilderX AI
         </Link>
         <div className="flex items-center gap-4">

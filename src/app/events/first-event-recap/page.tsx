@@ -4,6 +4,12 @@ import Image from 'next/image';
 import { remark } from 'remark';
 import html from 'remark-html';
 
+export const metadata = {
+  title: 'BuilderX AI 首次线下活动回顾',
+  description: '2026年1月25日，第一期线下共创活动：把 Idea 变成可以定性的出发点。',
+};
+
+
 const markdownContent = `
 # [BuilderX AI 首次线下活动回顾]
 
@@ -77,10 +83,10 @@ export default async function FirstEventRecapPage() {
       <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-purple-600/30 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[10%] left-[-100px] w-[300px] h-[300px] bg-cyan-600/20 rounded-full blur-[80px] pointer-events-none" />
 
-      <main className="flex-grow flex flex-col items-center relative z-10 px-4 py-8 md:py-12 pt-24 md:pt-32">
+      <main id="main-content" className="flex-grow flex flex-col items-center relative z-10 px-4 py-8 md:py-12 pt-24 md:pt-32">
         <div className="max-w-3xl w-full">
           <Image 
-            src="/activity-1.png" 
+            src="/activity-1.jpg" 
             alt="First Event Recap Image" 
             width={800} // Adjust width as needed
             height={400} // Adjust height as needed

@@ -4,6 +4,12 @@ import Image from 'next/image';
 import { remark } from 'remark';
 import html from 'remark-html';
 
+export const metadata = {
+  title: '新年小年派对回顾',
+  description: '2026年2月15日，BuilderX AI 新年小年派对：在轻松的氛围里聊 AI 现状与创业。',
+};
+
+
 const markdownContent = `
 # [BuilderX AI 新年小年派对回顾]
 
@@ -46,7 +52,7 @@ export default async function XiaonianEventRecapPage() {
       <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-purple-600/30 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[10%] left-[-100px] w-[300px] h-[300px] bg-cyan-600/20 rounded-full blur-[80px] pointer-events-none" />
 
-      <main className="flex-grow flex flex-col items-center relative z-10 px-4 py-8 md:py-12 pt-24 md:pt-32">
+      <main id="main-content" className="flex-grow flex flex-col items-center relative z-10 px-4 py-8 md:py-12 pt-24 md:pt-32">
         <div className="max-w-3xl w-full">
           <Image 
             src="/events/2026-02-15-xiaonian/event.jpg" 

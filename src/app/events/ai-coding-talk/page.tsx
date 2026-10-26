@@ -4,6 +4,12 @@ import Image from 'next/image';
 import { remark } from 'remark';
 import html from 'remark-html';
 
+export const metadata = {
+  title: '一个人 + AI = 一个团队：线上分享回顾',
+  description: 'AI Coding 全栈开发实战：3万行代码、22个页面，从需求分析到部署上线的全流程。',
+};
+
+
 const markdownContent = `
 # [一个人 + AI = 一个团队] 线上分享回顾
 
@@ -83,7 +89,7 @@ export default async function AICodingTalkRecapPage() {
       <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-cyan-600/30 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[10%] left-[-100px] w-[300px] h-[300px] bg-purple-600/20 rounded-full blur-[80px] pointer-events-none" />
 
-      <main className="flex-grow flex flex-col items-center relative z-10 px-4 py-8 md:py-12 pt-24 md:pt-32">
+      <main id="main-content" className="flex-grow flex flex-col items-center relative z-10 px-4 py-8 md:py-12 pt-24 md:pt-32">
         <div className="max-w-3xl w-full">
           {/* Stats Banner */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
