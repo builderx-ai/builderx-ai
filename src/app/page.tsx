@@ -5,6 +5,7 @@ import FlowingLinesBackground from '@/components/FlowingLinesBackground';
 import Timeline from '@/components/Timeline'; // Import the Timeline component
 import Image from 'next/image';
 import SiteFooter from '@/components/SiteFooter';
+import UpcomingEvents from '@/components/UpcomingEvents';
 
 interface Event {
   date: string;
@@ -58,6 +59,8 @@ export default function Home() {
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Australia Top AI community that connects builders and founders.
           </p>
+
+          <UpcomingEvents />
 
           {/* Timeline Section */}
           <section className="w-full text-left mt-12">

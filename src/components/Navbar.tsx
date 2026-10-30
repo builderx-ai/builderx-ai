@@ -10,6 +10,12 @@ const Navbar = () => {
           BuilderX AI
         </Link>
         <div className="flex items-center gap-4">
+          <Link
+            href="/events"
+            className="rounded text-sm font-semibold text-gray-300 transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          >
+            活动
+          </Link>
           <Link href="/subscribe">
             <Button variant="outline" className="border-white/20 hover:bg-white/10 text-xs h-8">
               Subscribe
