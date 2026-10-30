@@ -15,17 +15,6 @@ export interface UpcomingEvent {
 
 export const UPCOMING: UpcomingEvent[] = [
   {
-    date: '10 月 30 日 · 周五',
-    time: '晚上 8:00 – 9:00（悉尼时间）',
-    format: '线上',
-    title: 'Showcase：在 Cloudflare 上跑 MCP',
-    host: 'Bill Wang',
-    hostUrl: 'https://www.linkedin.com/in/xbillwang',
-    summary: '现场演示怎么把 MCP server 部署到 Cloudflare 上，让你的 AI 应用直接调用。会上还会公布 11 月底悉尼线下活动的玩法。',
-    cta: { label: '加入 Teams 会议', href: 'https://teams.live.com/meet/9340157001202?p=t6NjYxFjS8fc12IOyM', external: true },
-    tag: '今晚',
-  },
-  {
     date: '11 月底 · 周末',
     time: '下午，约 3 小时',
     format: '线下',
@@ -37,7 +26,15 @@ export const UPCOMING: UpcomingEvent[] = [
   },
 ];
 
-export const PAST = [
+export interface PastEvent {
+  date: string;
+  title: string;
+  note?: string;
+  href?: string; // recap page; omit if there is none yet
+}
+
+export const PAST: PastEvent[] = [
+  { date: '2026 年 10 月 30 日', title: 'Showcase：在 Cloudflare 上跑 MCP', note: '线上分享 · Bill Wang' },
   { date: '2026 年 2 月 15 日', title: '新年小年派对', href: '/events/2026-02-15-xiaonian' },
   { date: '2026 年 2 月 5 日', title: '一个人 + AI = 一个团队', href: '/events/ai-coding-talk' },
   { date: '2026 年 1 月 25 日', title: 'BuilderX AI 首次线下活动', href: '/events/first-event-recap' },

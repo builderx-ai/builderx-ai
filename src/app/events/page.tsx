@@ -78,17 +78,31 @@ export default function EventsPage() {
           <section aria-label="往期活动" className="mt-16">
             <h2 className="text-xl font-bold text-gray-300">往期活动</h2>
             <ul className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10">
-              {PAST.map((p) => (
-                <li key={p.href}>
-                  <Link
-                    href={p.href}
-                    className="flex items-center justify-between gap-4 px-6 py-4 transition-colors duration-300 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
-                  >
-                    <span className="text-base font-semibold">{p.title}</span>
-                    <span className="shrink-0 font-mono text-sm text-gray-500">{p.date} →</span>
-                  </Link>
-                </li>
-              ))}
+              {PAST.map((p) => {
+                const inner = (
+                  <>
+                    <span>
+                      <span className="block text-base font-semibold">{p.title}</span>
+                      {p.note && <span className="mt-0.5 block text-sm text-gray-500">{p.note}</span>}
+                    </span>
+                    <span className="shrink-0 font-mono text-sm text-gray-500">{p.date}{p.href ? ' →' : ''}</span>
+                  </>
+                );
+                return (
+                  <li key={p.title}>
+                    {p.href ? (
+                      <Link
+                        href={p.href}
+                        className="flex items-center justify-between gap-4 px-6 py-4 transition-colors duration-300 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
+                      >
+                        {inner}
+                      </Link>
+                    ) : (
+                      <div className="flex items-center justify-between gap-4 px-6 py-4">{inner}</div>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </section>
         </div>

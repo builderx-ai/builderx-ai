@@ -15,7 +15,7 @@ const UpcomingEvents = () => {
           全部活动 →
         </Link>
       </div>
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className={`grid gap-4 ${UPCOMING.length > 1 ? 'md:grid-cols-2' : ''}`}>
         {UPCOMING.map((e) => (
           <article key={e.title} className="flex flex-col rounded-2xl border border-white/10 bg-[#181818]/90 p-6 backdrop-blur-sm">
             <div className="flex flex-wrap items-center gap-2">
