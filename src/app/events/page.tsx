@@ -17,6 +17,7 @@ interface UpcomingEvent {
   format: '线上' | '线下';
   title: string;
   host?: string;
+  hostUrl?: string;
   summary: string;
   cta: { label: string; href: string; external?: boolean };
   secondary?: { label: string; href: string };
@@ -30,6 +31,7 @@ const UPCOMING: UpcomingEvent[] = [
     format: '线上',
     title: 'Showcase：在 Cloudflare 上跑 MCP',
     host: 'Bill Wang',
+    hostUrl: 'https://www.linkedin.com/in/xbillwang',
     summary: '现场演示怎么把 MCP server 部署到 Cloudflare 上，让你的 AI 应用直接调用。会上还会公布 11 月底悉尼线下活动的玩法。',
     cta: { label: '加入 Teams 会议', href: 'https://teams.live.com/meet/9340157001202?p=t6NjYxFjS8fc12IOyM', external: true },
     tag: '今晚',
@@ -89,7 +91,18 @@ export default function EventsPage() {
                 <h2 className="mt-4 text-3xl font-bold" style={{ textWrap: 'balance' }}>{e.title}</h2>
                 <p className="mt-2 text-sm text-gray-500">
                   {e.time}
-                  {e.host ? ` · 分享人 ${e.host}` : ''}
+                  {e.host && (
+                    <>
+                      {' · 分享人 '}
+                      {e.hostUrl ? (
+                        <a href={e.hostUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 underline underline-offset-4 transition-colors duration-300 hover:text-white">
+                          {e.host}
+                        </a>
+                      ) : (
+                        e.host
+                      )}
+                    </>
+                  )}
                 </p>
                 <p className="mt-4 max-w-2xl text-base text-gray-300" style={{ textWrap: 'pretty' }}>{e.summary}</p>
                 <div className="mt-6 flex flex-wrap gap-3">
