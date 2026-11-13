@@ -4,12 +4,12 @@ import Navbar from '@/components/Navbar';
 import SiteFooter from '@/components/SiteFooter';
 import { UPCOMING, PAST } from '@/data/events';
 
-// Events index. Not linked from the homepage yet (Cheney reviews it first).
+// Events index (linked from homepage nav).
 // Event data lives in src/data/events.ts.
 
 export const metadata = {
   title: '活动',
-  description: 'BuilderX AI 即将到来的线上分享与悉尼线下活动，以及往期活动回顾。',
+  description: 'BuilderX AI 线上分享与悉尼线下活动，以及往期活动回顾。',
 };
 
 const btnPrimary =
