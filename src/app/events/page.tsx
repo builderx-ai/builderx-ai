@@ -29,13 +29,16 @@ export default function EventsPage() {
               className="mt-3 text-5xl font-bold leading-none tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-[#9B9B9B]"
               style={{ textWrap: 'balance' }}
             >
-              即将到来
+              {UPCOMING.length > 0 ? '即将到来' : '活动'}
             </h1>
             <p className="mt-5 max-w-[680px] text-lg text-gray-400" style={{ textWrap: 'pretty' }}>
-              线上分享随时加入，悉尼线下活动欢迎带上家人朋友。
+              {UPCOMING.length > 0
+                ? '线上分享随时加入，悉尼线下活动欢迎带上家人朋友。'
+                : '下一场活动筹备中，订阅即可第一时间收到通知。'}
             </p>
           </header>
 
+          {UPCOMING.length > 0 && (
           <section aria-label="即将到来的活动" className="space-y-4">
             {UPCOMING.map((e) => (
               <article key={e.title} className="rounded-2xl border border-white/10 bg-[#181818] p-6 md:p-8">
@@ -74,8 +77,9 @@ export default function EventsPage() {
               </article>
             ))}
           </section>
+          )}
 
-          <section aria-label="往期活动" className="mt-16">
+          <section aria-label="往期活动" className={UPCOMING.length > 0 ? 'mt-16' : 'mt-4'}>
             <h2 className="text-xl font-bold text-gray-300">往期活动</h2>
             <ul className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10">
               {PAST.map((p) => {
