@@ -13,18 +13,9 @@ export interface UpcomingEvent {
   tag?: string;
 }
 
-export const UPCOMING: UpcomingEvent[] = [
-  {
-    date: '11 月底 · 周末',
-    time: '下午，约 3 小时',
-    format: '线下',
-    title: 'AI Eco-Fashion Runway',
-    summary: '大人用 AI 设计衣服，小朋友用纸箱和气泡膜把它做出来，模特穿上走地毯秀。零门槛、合家欢。现在招募主持、控台、拍摄、模特和评委。',
-    cta: { label: '查看活动预览', href: '/events/eco-runway' },
-    secondary: { label: '订阅报名通知', href: '/subscribe' },
-    tag: '招募中',
-  },
-];
+// Empty = homepage "即将到来" section is hidden and /events shows only past events.
+// (AI Eco-Fashion Runway, 11 月底, was cancelled.)
+export const UPCOMING: UpcomingEvent[] = [];
 
 export interface PastEvent {
   date: string;
